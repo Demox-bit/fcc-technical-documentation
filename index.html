@@ -8,7 +8,27 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Java Documentation</title>
 </head>
+<script>
 
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const span = document.getElementById('toggle-hidden');
+
+        
+
+        span.addEventListener('click', function() {
+
+            const hiddenSection = document.getElementById('Hidden_place');
+
+            hiddenSection.style.display = hiddenSection.style.display === 'none' ? 'block' : 'none';
+
+            hiddenSection.scrollIntoView({ behavior: 'smooth' });
+
+        });
+
+    });
+
+</script>
 <body>
     <nav id="navbar">
         <header>Java Documentation</header>
@@ -41,6 +61,7 @@
                 <li>Start a project within the IDE</li>
                 <li>Code up "Hello World" and run the code</li>
             </ol>
+
         </section>
         <section class="main-section" id="Java_Entry_Point">
             <header>Java Entry Point</header>
@@ -148,9 +169,13 @@
           </code>
         </pre>
         </section>
-        <footer>
-            <p>Documentation brought to you on the fly by Landon Schlangen</p>
-        </footer>
+<section class="main-section" id="Hidden_place" style="display: none;">
+    <header>Hidden Section</header>
+    <p>Hello World</p>
+</section>
+<footer>
+    <p>Documentation brought to you on the fly by <span id="toggle-hidden" style="cursor: pointer; color: inherit;">Landon Schlangen</span></p>
+</footer>
     </main>
 </body>
 
